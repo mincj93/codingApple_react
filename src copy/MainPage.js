@@ -1,21 +1,20 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import {useNavigate ,useLocation } from 'react-router-dom'
+import "./style.css";
 
 import {Component} from './Component';
-import "./style.css";
 import "./style_copy.css";
-        
-const SubPage = () => {
-	const routeVariants = {
+
+
+const MainPage = () => {
+    const routeVariants = {
         initial: {
             x: '100%',
             top:'50%',
-            
+            left: '50%'
         },
         final: {
             x: '0',
-            left: '50%',
             position:'relative',
             width:'100%',
             height:'100vh',
@@ -35,7 +34,7 @@ const SubPage = () => {
                 initial="initial"
                 animate="final">
                     {/* <a href='/SubPage'><Component /></a> */}
-                    <Component page="/"/>
+                    <Component page='./SubPage'/>
                 </motion.div>
             </div>
         </div>
@@ -43,4 +42,4 @@ const SubPage = () => {
 	);
 };
 
-export default SubPage;
+export default MainPage;

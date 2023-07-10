@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import {useNavigate ,useLocation } from 'react-router-dom'
+import "./style.css";
 
 import {Component} from './Component';
-import "./style.css";
-import "./style_copy.css";
+// import "./style_copy.css";
         
 const SubPage = () => {
 	const routeVariants = {
@@ -26,20 +25,18 @@ const SubPage = () => {
     }
 
 	return (
-        <>
         <div className="wrapper">
             <div className="headerBox">피그마-리액트 협업</div>
             <div className="actionBox">
-                <motion.div 
-                variants={routeVariants}
-                initial="initial"
-                animate="final">
-                    {/* <a href='/SubPage'><Component /></a> */}
-                    <Component page="/"/>
-                </motion.div>
-            </div>
+            <motion.div 
+            variants={routeVariants}
+            initial="initial"
+            animate="final">
+                {/* <a href='/'><Component /></a> */}
+                <Component page='./MainPage'/>
+            </motion.div>
         </div>
-        </>
+    </div>
 	);
 };
 

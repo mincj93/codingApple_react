@@ -7,16 +7,15 @@ import React from "react";
 import "./style_copy.css";
 import { useNavigate } from "react-router-dom";
 
-
-export const Component = ({page}) => {
-  console.log('페이지출력',page);
+export const Component = (page) => {
+  console.log(page);
   let navigate = useNavigate();
 
   return (
     <div className={`component`}>
       <div className="overlap-group">
         <div className="button" />
-        <div className="element" onClick={() => {navigate(page)}}>확인 →</div>
+        <div className="element" onClick={navigate("./MainPage")}>확인 →</div>
       </div>
     </div>
   );
