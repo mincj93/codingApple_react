@@ -27,7 +27,7 @@ const SubPage = () => {
             initial="initial"
             animate="final">
                 {/* <a href='/SubPage'><Component /></a> */}
-                <SubComponent page="/"/>
+                <SubComponent page="/" buttonClassName='button'/>
             </motion.div>
         </div>
         </>

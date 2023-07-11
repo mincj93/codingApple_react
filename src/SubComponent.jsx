@@ -16,7 +16,7 @@ export const SubComponent = ({ page, className, buttonClassName, text = "Main â†
   return (
     <div className={`component`}>
       <div className="overlap-group">
-        <div className={`button ${buttonClassName}`} />
+        <div className='component button' />
         <div className="element" onClick={() => {navigate(page)}}>{text}</div>
       </div>
     </div>
