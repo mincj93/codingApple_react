@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import {useNavigate ,useLocation } from 'react-router-dom'
 
 import {SubComponent} from './SubComponent';
+import './SubStyle.css';
         
 const SubPage = () => {
 	const routeVariants = {

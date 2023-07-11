@@ -32,7 +32,7 @@ const MainPage = () => {
             initial="initial"
             animate="final">
                 {/* <a href='/SubPage'><Component /></a> */}
-                <MainComponent page="./SubPage"/>
+                <MainComponent page="./SubPage" buttonClassName='button'/>
             </motion.div>
         </div>
         </>
