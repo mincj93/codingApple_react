@@ -1,14 +1,11 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import {useNavigate ,useLocation } from 'react-router-dom'
 
 import {MainComponent} from './MainComponent';
-import "./style.css";
-
+import MainStyle from "./MainStyle.module.css";
 
 const MainPage = () => {
 
-    let navigate = useNavigate();
 
     const routeVariants = {
         initial: {
@@ -23,11 +20,10 @@ const MainPage = () => {
     }
 
 	return (
-        <>
-        <div className="wrapper">
-            <div className="headerBox">피그마-리액트 협업</div>
+        <div className={MainStyle.wrapper}>
+            <div className={MainStyle.headerBox}>피그마-리액트 협업</div>
             <motion.div 
-            className='btnWrapper'
+            className={MainStyle.btnWrapper}
             variants={routeVariants}
             initial="initial"
             animate="final">
@@ -35,7 +31,6 @@ const MainPage = () => {
                 <MainComponent page="./SubPage" buttonClassName='button'/>
             </motion.div>
         </div>
-        </>
 	);
 };
 

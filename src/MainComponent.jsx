@@ -5,8 +5,8 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./MainStyle.css";
-
+// import "./MainStyle.css";
+import MainStyle from "./MainStyle.module.css";
 
 
 export const MainComponent = ({page}) => {
@@ -14,10 +14,10 @@ export const MainComponent = ({page}) => {
   let navigate = useNavigate();
 
   return (
-    <div className={`component`}>
-      <div className="overlap-group">
-        <div className="component button" />
-        <div className="element" onClick={() => {navigate(page)}}>Sub →</div>
+    <div className={MainStyle.component}>
+      <div className={MainStyle.overlapGroup}>
+        <div className={MainStyle.button}/>
+        <div className={MainStyle.element} onClick={() => {navigate(page)}}>← 서브</div>
       </div>
     </div>
   );

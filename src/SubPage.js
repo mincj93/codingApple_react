@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import {useNavigate ,useLocation } from 'react-router-dom'
 
 import {SubComponent} from './SubComponent';
-import './SubStyle.css';
+import SubStyle from './SubStyle.module.css';
         
 const SubPage = () => {
 	const routeVariants = {
@@ -20,15 +19,15 @@ const SubPage = () => {
 
 	return (
         <>
-        <div className="wrapper">
-            <div className="headerBox">피그마-리액트 협업</div>
+        <div className={SubStyle.wrapper}>
+            <div className={SubStyle.headerBox}>피그마-리액트 협업</div>
             <motion.div 
-            className='btnWrapper'
+            className={SubStyle.btnWrapper}
             variants={routeVariants}
             initial="initial"
             animate="final">
                 {/* <a href='/SubPage'><Component /></a> */}
-                <SubComponent page="/" buttonClassName='button'/>
+                <SubComponent page="/"/>
             </motion.div>
         </div>
         </>
